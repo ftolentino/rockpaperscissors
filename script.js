@@ -17,14 +17,13 @@ function getHumanChoice() {
   return choice.toLowerCase();
 }
 
-// define human and computer selection variables which call the getHuman and getComputerChoice functions, so that the variables can be used as arguments in a playRound() function
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-// Initialize human and computer score variables, in global scope
-let humanScore = 0;
-let computerScore = 0;
-
 function playGame() {
+  // define human and computer selection variables which call the getHuman and getComputerChoice functions, so that the variables can be used as arguments in a playRound() function
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerChoice();
+  // Initialize human and computer score variables, in global scope
+  let humanScore = 0;
+  let computerScore = 0;
   // Play a round logic
   function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
@@ -78,13 +77,15 @@ function playGame() {
     }
   }
 
-  let play = playRound(humanSelection, computerSelection);
-
+  playRound(humanSelection, computerSelection);
   console.log(
-    "Your Score " + humanScore + " - " + "Computer Score " + computerScore
-  );
-
-  return play;
+  "Your Score " + humanScore + " - " + "Computer Score " + computerScore
+);
+  
 }
 
+playGame();
+playGame();
+playGame();
+playGame();
 playGame();
