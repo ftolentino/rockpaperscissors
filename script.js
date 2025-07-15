@@ -12,7 +12,6 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  // Define a variable in global scope to capture the human input choice, using Javascript's built in method prompt()
   let choice = prompt("Choose: rock, paper, or scissors");
   return choice.toLowerCase();
 }
